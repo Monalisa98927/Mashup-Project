@@ -54,9 +54,7 @@
     var lastSpan;
     var pageNumSpan;
     var currPageSpan;
-
     window.onload=function(){
-
       blockTable = document.getElementById("blocks");
       preSpan = document.getElementById("spanPre");
       firstSpan = document.getElementById("spanFirst");
@@ -64,7 +62,6 @@
       lastSpan = document.getElementById("spanLast");
       pageNumSpan = document.getElementById("spanTotalPage");
       currPageSpan = document.getElementById("spanPageNum");
-
       numCount = document.getElementById("blocks").rows.length - 1;
       columnsCounts = blockTable.rows[0].cells.length;
       pageCount = 2;
@@ -76,7 +73,7 @@
     };
   </script>
 </head>
-<body align="center" background="img/back.jpg">
+<body align="center" background="../img/back.jpg">
 <div class="container" align="center" >
 
   <h2 align="center" style="margin-top: 10%; color: midnightblue">全国WIFI站点 & 天气预报查询</h2>
@@ -89,11 +86,11 @@
     </tr>
     <tr>
       <td><a style="color: midnightblue">全国WIFI站点查询</a> <font color="green"></font></td>
-      <td class="hidden-phone"><a href="html/wifi.html">wifi.html</a></td>
+      <td class="hidden-phone"><a href="wifi.html">wifi.html</a></td>
     </tr>
     <tr>
       <td><a style="color: midnightblue">全国实况天气、天气预报查询</a> <font color="green"></font></td>
-      <td class="hidden-phone"><a href="html/forecast.html">forecast.html</a></td>
+      <td class="hidden-phone"><a href="forecast.html">forecast.html</a></td>
     </tr>
   </table>
 
