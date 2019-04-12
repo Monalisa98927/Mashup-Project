@@ -40,7 +40,6 @@
     padding:5px;
   }
 </style>
-  <script type="text/javascript" src="pagination.js"></script>
   <script type="text/javascript">
     //全局变量
     var numCount;       //数据总数量
@@ -73,7 +72,7 @@
       if(0 != numCount%pageCount){
         pageNum += 1;
       }
-      firstPage();
+      //firstPage();
     };
   </script>
 </head>
@@ -81,7 +80,7 @@
 <div class="container" align="center" >
 
   <h2 align="center" style="margin-top: 10%; color: midnightblue">全国WIFI站点 & 天气预报查询</h2>
-
+  <h3 align="center" style="color: red">（请用Chrome浏览器访问以下站点）</h3>
   <table id="blocks" class="table table-striped" style="margin-top:50px;
     text-align: center;">
     <tr>

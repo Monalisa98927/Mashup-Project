@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
   <title>Wifi</title>
   <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
@@ -48,8 +48,6 @@
     }
   </style>
   <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-<!--  <script src="bootstrap-table.js"></script>-->
-<!--  <link rel="stylesheet" href="bootstrap-table.css"/>-->
   <script src="https://webapi.amap.com/maps?v=1.4.14&key=6976e9f5ffca2d53dcebdcd33ee2deae&plugin=AMap.PlaceSearch,AMap.AdvancedInfoWindow,AMap.Geocoder"></script>
   <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
@@ -66,10 +64,7 @@
 </style>
 
 <div style="max-height: 500px">
-  <table class="table table-bordered" id="table_page"
-          data-pagination="true"
-          data-size-pagination="client"
-          data-page-size="3">
+  <table class="table table-bordered" id="table_page">
     <thead style="font-size: 14px;">
     <tr>
       <th style="min-width: 100px;">WIFI站点</th>
@@ -83,7 +78,7 @@
 </div>
 
 <div style="width: 800px; float: right; margin-top: 30px; margin-right: 10px; margin-bottom: 50px;" class="input-item ">
-  <p style="font-size: 18px; font-weight: bold; color: midnightblue">点击地图任意位置   查询此地址周围WIFI:&nbsp&nbsp&nbsp&nbsp</p>
+  <p style="font-size: 18px; font-weight: bold; color: midnightblue">点击地图任意位置   查询此地址周围WIFI:&nbsp;&nbsp;&nbsp;&nbsp;</p>
   <div class="input-item-prepend"><span class="input-item-text">经纬度</span></div>
   <input style="margin-right: 10px;" id='lnglat' type="text" disabled>
   <div class="input-item-prepend"><span class="input-item-text">地址</span></div>
@@ -148,7 +143,7 @@
       //电话号码
       //url:'http://apis.juhe.cn/mobile/get?phone=13429667914&key=13719364ba0de193547de6f7fd7725f9',
       //加油站
-      url:'http://apis.juhe.cn/oil/local?key=1d6caa7445540f0535f854aaee3101c8&lon='+lon+'&lat='+lat+'&format=2&r=3000',
+      //url:'http://apis.juhe.cn/oil/local?key=1d6caa7445540f0535f854aaee3101c8&lon='+lon+'&lat='+lat+'&format=2&r=3000',
       //新闻头条
       //url:'http://v.juhe.cn/toutiao/index?type=top&key=8e0af24653d32b64e6e2592ed000a76f',
       //WIFI API
