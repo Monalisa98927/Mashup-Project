@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全国WIFI、天气查询</title><style type="text/css">
+  body{
+  }
+  table .table-striped{
+  }
+  table th{
+    text-align: left;
+    height: 30px;
+    background: #deeeee;
+    padding: 5px;
+    margin: 0;
+    border: 0px;
+    text-align: center;
+    width: 300px;
+  }
+  table td{
+    text-align: left;
+    height:30px;
+    margin: 0;
+    padding: 5px;
+    border:0px;
+    text-align: center;
+    width: 300px;
+  }
+  table tr:hover{
+    background: #eeeeee;
+  }
+  .span6{
+    /*width:500px;*/
+    float:inherit;
+    margin:10px;
+  }
+  #pagiDiv span{
+    background:#1e90ff;
+    border-radius: .2em;
+    padding:5px;
+  }
+</style>
+  <script type="text/javascript" src="pagination.js"></script>
+  <script type="text/javascript">
+    //全局变量
+    var numCount;       //数据总数量
+    var columnsCounts;  //数据列数量
+    var pageCount;      //每页显示的数量
+    var pageNum;        //总页数
+    var currPageNum ;   //当前页数
+    var blockTable;
+    var preSpan;
+    var firstSpan;
+    var nextSpan;
+    var lastSpan;
+    var pageNumSpan;
+    var currPageSpan;
+
+    window.onload=function(){
+
+      blockTable = document.getElementById("blocks");
+      preSpan = document.getElementById("spanPre");
+      firstSpan = document.getElementById("spanFirst");
+      nextSpan = document.getElementById("spanNext");
+      lastSpan = document.getElementById("spanLast");
+      pageNumSpan = document.getElementById("spanTotalPage");
+      currPageSpan = document.getElementById("spanPageNum");
+
+      numCount = document.getElementById("blocks").rows.length - 1;
+      columnsCounts = blockTable.rows[0].cells.length;
+      pageCount = 2;
+      pageNum = parseInt(numCount/pageCount);
+      if(0 != numCount%pageCount){
+        pageNum += 1;
+      }
+      firstPage();
+    };
+  </script>
+</head>
+<body align="center" background="img/back.jpg">
+<div class="container" align="center" >
+
+  <h2 align="center" style="margin-top: 10%; color: midnightblue">全国WIFI站点 & 天气预报查询</h2>
+
+  <table id="blocks" class="table table-striped" style="margin-top:50px;
+    text-align: center;">
+    <tr>
+      <th style="color: midnightblue">功能</th>
+      <th class="hidden-phone" style="color: midnightblue">访问地址</th>
+    </tr>
+    <tr>
+      <td><a style="color: midnightblue">全国WIFI站点查询</a> <font color="green"></font></td>
+      <td class="hidden-phone"><a href="html/wifi.html">wifi.html</a></td>
+    </tr>
+    <tr>
+      <td><a style="color: midnightblue">全国实况天气、天气预报查询</a> <font color="green"></font></td>
+      <td class="hidden-phone"><a href="html/forecast.html">forecast.html</a></td>
+    </tr>
+  </table>
+
+</div>
+</body>
+</html>
